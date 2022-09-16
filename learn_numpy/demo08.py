@@ -1,7 +1,8 @@
 import numpy as np
-a=np.arange(10)
-A=np.arange(20).reshape(4,5)
-print(a[3],a[5],a[-1])
+
+a = np.arange(10)
+A = np.arange(20).reshape(4, 5)
+print(a[3], a[5], a[-1])
 print(a[2:4])
 print(f'A:\n{A}')
 # A[0,0]     # 取数组A的0行0列，返回值0
@@ -12,7 +13,7 @@ print(f'A:\n{A}')
 # A[0:2,2:4]  #取0和1行，2和3列
 # A[:,2]         # 取所有行中的第2列
 
-a[4:6]=520
+a[4:6] = 520
 print(f'a:{a}')
-A[:1,:2]=520
+A[:1, :2] = 520
 print(f'A:\n{A}')
