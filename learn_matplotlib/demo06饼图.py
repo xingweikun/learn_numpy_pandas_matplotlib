@@ -1,18 +1,21 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-plt.rcParams['font.sans-serif']=['SimHei']
-plt.rcParams['axes.unicode_minus']=False
-data=pd.read_excel('./课件/07.饼图.xlsx')
-plt.pie(x=data.第一次,labels=tuple(data.姓名),explode=(0,0.2,0),colors=['r','g','b'],shadow=True,autopct='%.2f%%',startangle=90,counterclock=False,labeldistance=0.8,radius=1.3,pctdistance=0.3,textprops={'fontsize':20,'color':'black'})
+
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+data = pd.read_excel('./课件/07.饼图.xlsx')
+plt.pie(x=data.第一次, labels=tuple(data.姓名), explode=(0, 0.2, 0), colors=['r', 'g', 'b'], shadow=True,
+        autopct='%.2f%%', startangle=90, counterclock=False, labeldistance=0.8, radius=1.3, pctdistance=0.3,
+        textprops={'fontsize': 20, 'color': 'black'})
 # 将饼图显示为正圆形,plt.axis( )
 plt.axis('equal')
-#添加图例，plt.legend( )
+# 添加图例，plt.legend( )
 # loc = 'upper right' 位于右上角
 # bbox_to_anchor=[0.5, 0.5] # 外边距 上边 右边
 # ncol=2 分两列
 # borderaxespad = 0.3图例的内边距
-plt.legend(loc="upper right",fontsize=10,bbox_to_anchor=(1.1,1.05),borderaxespad=0.3,ncol=3)
-plt.savefig('./图片/饼图.jpg',dpi=200,bbox_inches='tight') # bbox_inches='tight' 忽略不可见的轴
+plt.legend(loc="upper right", fontsize=10, bbox_to_anchor=(1.1, 1.05), borderaxespad=0.3, ncol=3)
+plt.savefig('./图片/饼图.jpg', dpi=200, bbox_inches='tight')  # bbox_inches='tight' 忽略不可见的轴
 plt.show()
 '''
 def pie(x, explode=None, labels=None, colors=None, autopct=None,

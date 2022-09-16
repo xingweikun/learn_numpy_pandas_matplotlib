@@ -11,7 +11,8 @@ hspace = 0.2 ＃为子图之间的空间保留的高度，平均轴高度的一�
 fig.subplots_adjust(wspace=0.5,hspace=0.5)
 '''
 import matplotlib.pyplot as plt
-布,图=plt.subplots(2,2)
+
+布, 图 = plt.subplots(2, 2)
 # wspace子图之间的宽度，hspace子图之间的高度，left代表子图与布的左边距离
-布.subplots_adjust(wspace=0.5, hspace=0.3,left=0.125, right=0.9,top=0.9,bottom=0.1)
+布.subplots_adjust(wspace=0.5, hspace=0.3, left=0.125, right=0.9, top=0.9, bottom=0.1)
 plt.show()

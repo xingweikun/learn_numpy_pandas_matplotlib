@@ -15,15 +15,16 @@
 '''
 import pandas as pd
 import matplotlib.pyplot as plt
-plt.rcParams['font.sans-serif']=['SimHei'] # 用黑体显示中文
+
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用黑体显示中文
 data = pd.read_excel('./课件/12.日期.xlsx')
-date=[d.strftime('%Y-%m-%d')for d in data.日期]
-plt.plot(date,data.销售)
-#文字旋转
-plt.xticks(date,rotation=45)
+date = [d.strftime('%Y-%m-%d') for d in data.日期]
+plt.plot(date, data.销售)
+# 文字旋转
+plt.xticks(date, rotation=45)
 plt.show()
 
-#网格线
+# 网格线
 data = pd.read_excel('./课件/12.日期.xlsx')
-plt.grid(axis='x',color='r',linestyle=':',linewidth=3)
+plt.grid(axis='x', color='r', linestyle=':', linewidth=3)
 plt.show()
